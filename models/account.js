@@ -20,6 +20,10 @@ exports.deserializeUser = function(id, cb) {
     });
 };
 
-exports.register = function(id, cb) {
-
+exports.register = function(account, password, cb) {
+    account.emails = [account.username + "@example.org"];
+    db.users.validateUserRecord(account, function(err, validatedAccount) {
+        if (err) { return cb(err); }
+        db.users.addUser(validatedAccount.username, password, validatedAccount.emails, cb);
+    });
 };

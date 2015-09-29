@@ -18,6 +18,7 @@ var StrategyOptions = {
     passReqToCallback: false,
     session: true
 };
+
 passport.use(new LocalStrategy(StrategyOptions, Account.authenticate));
 passport.serializeUser(Account.serializeUser);
 passport.deserializeUser(Account.deserializeUser);
@@ -45,7 +46,8 @@ app.get('/register', function(req, res) {
 });
 
 app.post('/register', function(req, res, next) {
-    Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
+    var Account = require('./models/account');
+    Account.register({ username : req.body.username }, req.body.password, function(err, account) {
         if (err) {
             return res.render("auth/register", {info: "Sorry. That username already exists. Try again."});
         }

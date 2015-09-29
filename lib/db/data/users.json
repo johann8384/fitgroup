@@ -1,18 +1,1 @@
-[
-  {
-    "id": 1,
-    "username": "jack",
-    "password": "secret",
-    "emails": [
-      "jack@example.org"
-    ]
-  },
-  {
-    "id": 2,
-    "username": "jill",
-    "password": "birthday",
-    "emails": [
-      "jill@example.net"
-    ]
-  }
-]
+[{"id":1,"username":"bob","password":"VnW2bu8miZre","emails":["bob@example.org"]},{"id":2,"username":"bobljkhlkj","password":"VnW2bu8miZre","emails":["bobljkhlkj@example.org"]},{"id":3,"username":"bobasdfasdf","password":"VnW2bu8miZre","emails":["bobasdfasdf@example.org"]},{"id":4,"username":"bobzxcsdg2","password":"VnW2bu8miZre","emails":["bobzxcsdg2@example.org"]}]
